@@ -13,6 +13,8 @@ The website contains the readable HTML version of my Quarto/Jupyter notebook, in
 * figures and intermediate results
 * questions for discussion
 * weekly progress updates
+* references and links to relevant literature
+* and more...
 
 The repository itself only exists to generate the website — the page above is the intended way to read the material.
 

@@ -16,7 +16,7 @@ Some spelling or grammar errors may be present, as the notes are not proofread a
 
 Thank you!
 
-<!-- ---  -->
+--- 
 # Week 1 - Overview
 
 I have been reading a lot of papers. The most notable are seen in the [citation section](https://thygeminator.github.io/research-notebook/#citationss). I have mostly been reading quickly through the papers (it still takes a lot of time), with the aim of not getting full understanding but noting down what seems important. I have found that the Bayesian approach to optimal sensor placement seems like an interesting way to go about the optimal sensor placement, and I have begun the process of getting a better understanding of the Bayesian approach. I have started a detailed reading of the paper:

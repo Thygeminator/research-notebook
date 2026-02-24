@@ -17,7 +17,7 @@ Some spelling or grammar errors may be present, as the notes are not proofread a
 Thank you!
 
 --- 
-# Week 1 - Overview 
+# Week 3 - Overview 
 
 I have created a project plan based on a template my friend shared from DTU Management. I used it as a starting point, though I think it includes more sections than necessary. I've kept them for now, but we can remove some later. Currently, the plan is a bit over two pages long.
 

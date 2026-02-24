@@ -19,10 +19,9 @@ Thank you!
 --- 
 # Week 1 - Overview 
 
-I have made an project Plan, an friend of mine send an template form "DTU Management" so it have taking that as an base line. I think that there are some more section then there is need i have add them for now but we can remove them. right now is it also over 2 pages. 
+I have created a project plan based on a template my friend shared from DTU Management. I used it as a starting point, though I think it includes more sections than necessary. I've kept them for now, but we can remove some later. Currently, the plan is a bit over two pages long.
 
-most important section:
+The most important sections are:
 
   - [Research Question](https://thygeminator.github.io/research-notebook/#research-question)
   - [Gantt Chart](https://thygeminator.github.io/research-notebook/#gantt-chart)
-  

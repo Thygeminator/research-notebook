@@ -17,11 +17,17 @@ Some spelling or grammar errors may be present, as the notes are not proofread a
 Thank you!
 
 --- 
-# Week 3 - Overview 
+# Week 4 - Overview 
 
-I have created a project plan based on a template my friend shared from DTU Management. I used it as a starting point, though I think it includes more sections than necessary. I've kept them for now, but we can remove some later. Currently, the plan is a bit over two pages long.
+This last week Have i been Playing whit the the FEM modeling, Ambient excitation, and operational modal analysis. along whit ideas for an general structure of my code.  
 
-The most important sections are:
 
-  - [Research Question](https://thygeminator.github.io/research-notebook/#research-question)
-  - [Gantt Chart](https://thygeminator.github.io/research-notebook/#gantt-chart)
+
+
+---
+# Questions
+
+
+FEM Model: 
+
+- I was looking at the [rayleigh command](https://openseespydoc.readthedocs.io/en/latest/src/reyleigh.html) and it seems like there are some different stiffness properties (betaKcurr, betaKinit, betaKcomm) do you know them? do you think that they can be used for stiffness updating in SHM ??? 

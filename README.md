@@ -99,3 +99,21 @@ After that, I explored alternative vibration-based features, particularly those 
   * Noise characteristics
 * Set up a realistic structural model (from the last meeting????)
 
+## Suggested workflow:
+
+1. Complete the code so i have an scalable implementation of the Bayesian risk optimization framework
+   - [x] Class 1: FEM 
+   - [ ] Class 2: OMA 
+   - [ ] Class 3: Bayesian risk
+   - [ ] Class 4: Optimizer and caller class (this will call the other classes and run the optimization)
+      - Don't implement Optimizer yet.
+
+2. set up the real structural model 
+   - use Real geometry and material properties 
+      - This might give more realistic results and insights into the problem.
+
+3. Test the code with the "real structural model" + the "cantilever beam model"
+
+
+
+

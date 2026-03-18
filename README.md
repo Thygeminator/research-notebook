@@ -17,44 +17,85 @@ Some spelling or grammar errors may be present, as the notes are not proofread a
 Thank you!
 
 --- 
-# Week 4 - Overview 
+# Week now - Overview 
 
-This last week Have i been Playing whit the the FEM modeling, Ambient excitation, and operational modal analysis. along whit ideas for an general structure of my code I think that I will organize my code in to 3 main classes: (see the illustration in the image below)
+Hey Evangelos and Luigi,
 
-1. FEM-model: 
-2. Operational modal analysis:
-3. Bayesian model:
-   - This class/function will call and use the other two classes.
+I have been working on several aspects of the project. I started by setting up a cantilever beam model and computing the vibration periods for all possible combinations of stiffness reductions. I then compared the resulting feature lists of periods using metrics such as measured error and cosine similarity. The differences between cases turned out to be quite small, making it difficult to distinguish between them.
+
+After that, I explored alternative vibration-based features, particularly those based on changes in mode shapes. I also began reformulating the model for Bayesian risk optimization in vibration-based SHM. In parallel, I developed a simple case where I implemented the Bayesian risk framework and evaluated all possible sensor configurations.
 
 
-Here are the most interesting sections: 
+## Meeting
 
-- [FEM Model](https://thygeminator.github.io/research-notebook/#fem-model), whit the [FEM class code](https://thygeminator.github.io/research-notebook/#class)  
-   - Questions: 
-     - **what is the best way to apply damping in the model?** (currently do i use Rayleigh damping based on the 2 modes with the highest modal participation factors in the X direction)
-     - **Damping ratio = 0.03 ????** 
-      
-- [Ambient excitation](https://thygeminator.github.io/research-notebook/#ambient-excitation)
-  - Explanation: I generate ground acceleration time series, as White noise randomly generated from an normal distribution in time steps of $dt$, I have also add the option of sorting out the frequencies out side an given range. 
-  - Questions:
-    - **what is the amplitude of Ambient excitations transformed to ground accelerations?**
-    - currently do i only generate accelerations in the x-direction(horizontal direction), this do not activate modes in the y-direction(vertical direction), **should i also generate accelerations in the y-direction?** (i think that the excitation relative to the stiffens in the y-direction is so low that they shot be negligible, but i am not sure about this????)
-    - **what value of dt should i use?**
-    - **should i filter the frequencies of the ambient excitation?** and if so, **what frequency range should i use? and what is it based on?** 
-- [Operational Modal Analysis (OMA)](https://thygeminator.github.io/research-notebook/#operational-modal-analysis-oma)
-  - mostly just testing and trying to understand what to do.
+* [Model for Bayesian risk](https://thygeminator.github.io/research-notebook/#mathematical-model)
+* [Simple model implementation of Bayesian risk](https://thygeminator.github.io/research-notebook/#level-1---model-mcs) – using Monte Carlo Simulation (MCS) to integrate the risk function
+* [Vibration features](https://thygeminator.github.io/research-notebook/#features-shm)
 
 
 
-![](mermaid-figure-1.png)
+## My work since last time:
 
-  - note: the illustration of the **Bayesian model** is not perfect, because it is more an wrapper function there calls the other functions and gives them inputs.
+* Set up a cantilever FEM model and extracted model properties
+
+* Compared vibration periods across different damage cases
+
+* Investigated vibration-based features:
+
+  * Natural frequencies
+  * Mode shapes
+
+    * Modal Assurance Criterion (MAC)
+    * Mode shape curvature *(possibly too sensor-demanding for global SHM?)*
+    * Modal Strain Energy (MSE)
+    * Modal flexibility
+  * Modal damping ratio
+
+* Studied how stochasticity is introduced in the paper:
+  “An optimal sensor placement design framework for structural health monitoring using Bayes risk” ([Yang et al., 2022, p. 1](zotero://select/library/items/ZX4LZYUV)) ([pdf](zotero://open-pdf/library/items/BJRVXU2W?page=1&annotation=QBGHRMIK))
+
+  * Stochasticity is modeled as multivariate Gaussian noise in the output features:
+    $y = g(\theta, x(e)) + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \Sigma)$
+
+* Set up a similar model for vibration-based SHM with simplifying assumptions:
+
+  <!-- * To make Bayesian risk optimization computationally feasible, the stochasticity is assumed Gaussian
+  * This enables the use of **Gaussian quadrature** for efficient integration of the risk function -->
+
+* Developed a simple model where Bayesian risk is computed using MCS:
+
+  * A simplified stochastic model where the number and placement of sensors affect the noise level (via the covariance matrix $\Sigma$)
+  * Sensor cost is included
 
 
----
-# Questions
+
+## Most important problems / decisions:
+
+* How should **stochasticity be introduced in the model** in a way that is both:
+
+  * Computationally efficient
+  * Realistic
+
+  Possible approaches:
+
+  * Reduce computational cost: Gaussian quadrature, surrogate models, ...
+  * Increase realism: make some simulations??? 
+
+* What should be the capability of the SHM system?
+  The goal is a global system that triggers more detailed inspection when needed:
+
+  * Level 1: Damage vs. no damage
+  * Level 2: Damage location (which element is damaged)
+  * Level 3: Damage severity (degree of stiffness reduction)
 
 
-FEM Model: 
 
-- I was looking at the [rayleigh command](https://openseespydoc.readthedocs.io/en/latest/src/reyleigh.html) and it seems like there are some different stiffness properties (betaKcurr, betaKinit, betaKcomm) do you know them? do you think that they can be used for stiffness updating in SHM ??? 
+## Other problems:
+
+* Develop a realistic cost model for sensor and damage consequences
+* Gather sensor options, including:
+  * Measurement frequencies
+  * Installation and maintenance costs
+  * Noise characteristics
+* Set up a realistic structural model (from the last meeting????)
+

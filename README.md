@@ -19,101 +19,20 @@ Thank you!
 --- 
 # Week now - Overview 
 
-Hey Evangelos and Luigi,
-
-I have been working on several aspects of the project. I started by setting up a cantilever beam model and computing the vibration periods for all possible combinations of stiffness reductions. I then compared the resulting feature lists of periods using metrics such as measured error and cosine similarity. The differences between cases turned out to be quite small, making it difficult to distinguish between them.
-
-After that, I explored alternative vibration-based features, particularly those based on changes in mode shapes. I also began reformulating the model for Bayesian risk optimization in vibration-based SHM. In parallel, I developed a simple case where I implemented the Bayesian risk framework and evaluated all possible sensor configurations.
 
 
-## Meeting
+## Questions + Notes
 
-* [Model for Bayesian risk](https://thygeminator.github.io/research-notebook/#mathematical-model)
-* [Simple model implementation of Bayesian risk](https://thygeminator.github.io/research-notebook/#level-1---model-mcs) – using Monte Carlo Simulation (MCS) to integrate the risk function
-* [Vibration features](https://thygeminator.github.io/research-notebook/#features-shm)
+--- 
 
+- Problem of defining Damage states and sensor states, they explode combinatorially if no assumptions are made.
+  - Note: Sensor states is okay because that is what we optimize for. 
+  - Damage states: the problem whit the damage states are that they are need in the sum over all senarios in the bayesian risk, and they explode combinatorially quickly if no assumptions are made.
+    - Assume Example: only analyze states whit one damaged element.
+  - Number of states both for sensors and damage states, $e$ and $\theta$ respectively
+    - (Binomial coefficient) $ \text{Number of scenarios}=\binom{n}{k} =\frac{n!}{k!(n-k)!}$, where $n$ is the total number of elements or sensor locations, and $k$ is the number of elements or sensor locations that are in a particular state. 
+    - Total combinations: $\text{Total combinations} = \sum \binom{n}{k} = \sum \frac{n!}{k!(n-k)!} =  2^n$
 
+--- 
 
-## My work since last time:
-
-* Set up a cantilever FEM model and extracted model properties
-
-* Compared vibration periods across different damage cases
-
-* Investigated vibration-based features:
-
-  * Natural frequencies
-  * Mode shapes
-
-    * Modal Assurance Criterion (MAC)
-    * Mode shape curvature *(possibly too sensor-demanding for global SHM?)*
-    * Modal Strain Energy (MSE)
-    * Modal flexibility
-  * Modal damping ratio
-
-* Studied how stochasticity is introduced in the paper:
-  “An optimal sensor placement design framework for structural health monitoring using Bayes risk” ([Yang et al., 2022, p. 1](zotero://select/library/items/ZX4LZYUV)) ([pdf](zotero://open-pdf/library/items/BJRVXU2W?page=1&annotation=QBGHRMIK))
-
-  * Stochasticity is modeled as multivariate Gaussian noise in the output features:
-    $y = g(\theta, x(e)) + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \Sigma)$
-
-* Set up a similar model for vibration-based SHM with simplifying assumptions:
-
-  <!-- * To make Bayesian risk optimization computationally feasible, the stochasticity is assumed Gaussian
-  * This enables the use of **Gaussian quadrature** for efficient integration of the risk function -->
-
-* Developed a simple model where Bayesian risk is computed using MCS:
-
-  * A simplified stochastic model where the number and placement of sensors affect the noise level (via the covariance matrix $\Sigma$)
-  * Sensor cost is included
-
-
-
-## Most important problems / decisions:
-
-* How should **stochasticity be introduced in the model** in a way that is both:
-
-  * Computationally efficient
-  * Realistic
-
-  Possible approaches:
-
-  * Reduce computational cost: Gaussian quadrature, surrogate models, ...
-  * Increase realism: make some simulations??? 
-
-* What should be the capability of the SHM system?
-  The goal is a global system that triggers more detailed inspection when needed:
-
-  * Level 1: Damage vs. no damage
-  * Level 2: Damage location (which element is damaged)
-  * Level 3: Damage severity (degree of stiffness reduction)
-
-
-
-## Other problems:
-
-* Develop a realistic cost model for sensor and damage consequences
-* Gather sensor options, including:
-  * Measurement frequencies
-  * Installation and maintenance costs
-  * Noise characteristics
-* Set up a realistic structural model (from the last meeting????)
-
-## Suggested workflow:
-
-1. Complete the code so i have an scalable implementation of the Bayesian risk optimization framework
-   - [x] Class 1: FEM 
-   - [ ] Class 2: OMA 
-   - [ ] Class 3: Bayesian risk
-   - [ ] Class 4: Optimizer and caller class (this will call the other classes and run the optimization)
-      - Don't implement Optimizer yet.
-
-2. set up the real structural model 
-   - use Real geometry and material properties 
-      - This might give more realistic results and insights into the problem.
-
-3. Test the code with the "real structural model" + the "cantilever beam model"
-
-
-
-
+- how to define Priors and how shot they be understood??? 

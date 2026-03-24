@@ -95,7 +95,7 @@ $$
 or the conditional prior probability can be used:
 
 $$
-P(\theta \mid H_i) = \frac{P(\theta^*)}{P(H_i)} \text{, where } \theta^* \text{ is the state that belongs to the class } H_i
+P(\theta \mid H_i) = \frac{P(\theta^\star)}{P(H_i)} \text{, where } \theta^\star \text{ is the state that belongs to the class } H_i
 $$
 
 

@@ -14,9 +14,9 @@
 | $P(\theta)$                               | Prior probability of structural state |
 | $f(y \mid \theta)$                        | Likelihood of measurement |
 | $P(\theta \mid y)$                        | Posterior probability of structural state |
-| $L(d(\_),\theta\| C(d(\_),\theta))$       | Loss function given the cost function |
+| $L(d(...),\theta\| C(d(...),\theta))$       | Loss function given the cost function |
 | $C(d(...),\theta)$                         | Cost function |
-| $d(\_)$                                   | Decision rule for choosing structural state given the features |
+| $d(...)$                                   | Decision rule for choosing structural state given the features |
 | $\Psi(e)$                                 | Bayes risk for sensor configuration |
 
 ## Mathematical Model
@@ -162,7 +162,7 @@ $$
 
 
 # Algorithmic cost
-## big O notation
+## Big O notation
 
 ### Bayes risk estimation given a sensor configuration $e$
 
@@ -188,7 +188,8 @@ where:
 ### Cost of the stochastic in the likelihood function 
 
 
-
+## Dimension reduction techniques
+- Principal Component Analysis (PCA)
 
 
 # Appendix: General Theory

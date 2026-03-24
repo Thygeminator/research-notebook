@@ -170,7 +170,7 @@ here is the computational cost of the Estimation of the Bayes risk for a given s
 
 | MCS - monte carlo simulation | Gaussian quadrature |
 |---|---|
-| $O(\#\theta \cdot N \cdot (\#y^3 + \#\theta \cdot \#y^2))$ | $O(\theta \cdot M^{\#y})$ |
+| $O(\sharp\theta \cdot N \cdot (\#y^3 + \#\theta \cdot \#y^2))$ | $O(\theta \cdot M^{\#y})$ |
 |---|---|
 | Explanation | Explanation |
 | $(\#y^3 + \#\theta \cdot \#y^2)$ this is the cost of the Monte Carlo simulation |   |

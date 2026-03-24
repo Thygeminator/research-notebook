@@ -15,7 +15,7 @@
 | $f(y \mid \theta)$                        | Likelihood of measurement |
 | $P(\theta \mid y)$                        | Posterior probability of structural state |
 | $L(d(\_),\theta\| C(d(\_),\theta))$       | Loss function given the cost function |
-| $C(d(\_),\theta)$                         | Cost function |
+| $C(d(...),\theta)$                         | Cost function |
 | $d(\_)$                                   | Decision rule for choosing structural state given the features |
 | $\Psi(e)$                                 | Bayes risk for sensor configuration |
 

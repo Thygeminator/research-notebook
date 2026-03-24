@@ -7,8 +7,8 @@
 | $e$                                       | Sensor configuration (sensor locations) |
 | $\theta$                                  | Structural state (damage scenario) |
 | $x(e)$                                    | Sensor data for an given sensor configuration |
-| $y = g(\theta, x(e)) + \epsilon(e)$       | Measured vibration feature vector with noise/uncertainty |
-| $g(\theta, x(e))$                         | Vibration features (From OMA - Operational Modal Analysis or directly from the FEM model) |
+| $y = g(\theta, x(e, \theta)) + \epsilon(e)$       | Measured vibration feature vector with noise/uncertainty |
+| $g(x(e, \theta))$                         | Vibration features (From OMA - Operational Modal Analysis or directly from the FEM model) |
 | $\epsilon(e) \sim \mathcal{N}(0, \Sigma)$ | Measurement noise/uncertainty |
 | $\Sigma$                                  | Noise covariance matrix |
 | $P(\theta)$                               | Prior probability of structural state |
@@ -32,6 +32,7 @@ If we want an Level 1 SHM system where the SHM is only able to detect if there i
 $$
 \theta \in \{H_0, H_1\}
 $$
+
 where $H_0 \in \{\theta_1, \theta_2, \ldots, \theta_n\}$ represents the undamaged state and $H_1 \in \{\theta_{n+1}, \theta_{n+2}, \ldots, \theta_K\}$ represents the damaged state.
 
 - As an simple approximation can we assume that heathy is the stat whit no damage in non of the elements and that the damaged state is the state whit one damaged element.   
@@ -39,8 +40,9 @@ where $H_0 \in \{\theta_1, \theta_2, \ldots, \theta_n\}$ represents the undamage
 ---
 ### Feature Model
 The measured vibration features $y$ are modeled as a function of the structural state $\theta$, the sensor configuration $e$, and the measurement noise/uncertainty $\epsilon(e)$.
+
 $$
-y = g(\theta, x(e)) + \epsilon(e)
+y = g(x(e, \theta)) + \epsilon(e)
 $$
 
 where $\epsilon(e)$ is the feature noise/uncertainty, which is assumed to be Gaussian with zero mean and covariance $\Sigma$. The function $g(\theta, x(e))$ represents the relationship between the structural state $\theta$, the sensor configuration $e$, and the measured features $y$. This function can be derived from the physics of the problem, such as using a finite element model (FEM) to simulate the structural response for different damage scenarios and sensor configurations, or it can be obtained from operational modal analysis (OMA) of the structure under ambient excitations.
@@ -70,7 +72,7 @@ $$
 Here is the likelihood for the Level 1 SHM system where we want to detect if there is damage or not:
 
 $$
-f(y \mid H)= \sum_{\theta \in H} f(y \mid \theta) P(\theta \mid H)
+f(y \mid H_i)= \sum_{\theta \in H_i} f(y \mid \theta) P(\theta \mid H_i)
 $$
 
 
@@ -93,7 +95,7 @@ $$
 or the conditional prior probability can be used:
 
 $$
-P(\theta \mid H=h) = \frac{P(\theta^*)}{P(H=h)} \text{, where } \theta^* \text{ is the state that belongs to the class } H=h
+P(\theta \mid H_i) = \frac{P(\theta^*)}{P(H_i)} \text{, where } \theta^* \text{ is the state that belongs to the class } H_i
 $$
 
 
@@ -111,7 +113,7 @@ $$
 For the Level 1 SHM system where we want to detect if there is damage or not, the posterior probability can be expressed as:
 
 $$
-P(H \mid y) = \frac{f(y \mid H) P(H)}{f(y)}
+P(H_i \mid y) = \frac{f(y \mid H_i) P(H_i)}{f(y)}
 $$
 
 
@@ -123,7 +125,7 @@ There are many discisions rules to chose from, one of them is the maximum a post
 
 $$
 d^*(y) =
-\arg\max_{H} P(H \mid y) 
+\arg\max_{H_i} P(H_i \mid y) 
 $$
 
 
@@ -137,8 +139,8 @@ The Bayes risk represents the expected loss for a sensor configuration.given the
 $$
 \Psi(e) =
 \mathbb{E}_{H, y}\left[
-L(d^*(y), H)
-\right] = \sum_H P(H) \int f(y \mid H) L(d^*(y), H) dy
+L(d^*(y), H_i)
+\right] = \sum_{H_i} P(H_i) \int f(y \mid H_i) L(d^*(y), H_i) dy
 $$
 
 
@@ -158,6 +160,33 @@ e^* =
 $$
 
 
+
+# Algorithmic cost
+## big O notation
+
+### Bayes risk estimation given a sensor configuration $e$
+
+here is the computational cost of the Estimation of the Bayes risk for a given sensor configuration $e$:
+
+| MCS - monte carlo simulation | Gaussian quadrature |
+|---|---|
+| $O(\#\theta \cdot N \cdot (\#y^3 + \#\theta \cdot \#y^2))$ | $O(\theta \cdot M^{\#y})$ |
+|---|---|
+| Explanation | Explanation |
+| $(\#y^3 + \#\theta \cdot \#y^2)$ this is the cost of the Monte Carlo simulation |   |
+| $\#y^3$ this is the cost of generating the multivariate normal samples |   |
+| $\#\theta \cdot \#y^2$ this is the cost of evaluating the likelihood for each structural state given the one MCS sample |   |
+
+
+note: I need some dimension reduction techniques to reduce the cost of the Gaussian quadrature method, because the cost grows exponentially with the dimensionality of the measurement space $\#y$.
+
+where:
+- $\#$ is the number of elements in the set
+    - so $\#\theta$ is the number of structural states (damage scenarios), $\#y$ is the dimensionality of the measurement space (length of the feature vector).
+- $N$ is the number of Monte Carlo samples.
+- $M$ is the number of quadrature points per dimension in the Gaussian quadrature method.
+
+### Cost of the stochastic in the likelihood function 
 
 
 

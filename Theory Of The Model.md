@@ -171,7 +171,6 @@ here is the computational cost of the Estimation of the Bayes risk for a given s
 | MCS - monte carlo simulation | Gaussian quadrature |
 |---|---|
 | $O(\sharp  \theta \cdot N \cdot (\sharp  y^3 + \sharp  \theta \cdot \sharp  y^2))$ | $O(\theta \cdot M^{\sharp y})$ |
-|---|---|
 | Explanation | Explanation |
 | $(\sharp y^3 + \sharp \theta \cdot \sharp y^2)$ this is the cost of the Monte Carlo simulation |   |
 | $\sharp y^3$ this is the cost of generating the multivariate normal samples |   |
@@ -181,7 +180,7 @@ here is the computational cost of the Estimation of the Bayes risk for a given s
 note: I need some dimension reduction techniques to reduce the cost of the Gaussian quadrature method, because the cost grows exponentially with the dimensionality of the measurement space $\sharp y$.
 
 where:
-- $\sharp $ is the number of elements in the set
+- $\sharp$ is the number of elements in the set
     - so $\sharp  \theta$ is the number of structural states (damage scenarios), $\sharp  y$ is the dimensionality of the measurement space (length of the feature vector).
 - $N$ is the number of Monte Carlo samples.
 - $M$ is the number of quadrature points per dimension in the Gaussian quadrature method.

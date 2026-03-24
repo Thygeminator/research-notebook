@@ -251,6 +251,7 @@ where:
 Bayes Risk is the expected value of a loss function over both the data and the parameter space. It represents the "average" loss you incur when using a specific decision rule, weighted by your prior beliefs. 
 
 See section 2.3 page 60-65 in the book "The Bayesian Choice From Decision-Theoretic Foundations to Computational Implementations" by Christian P. Robert there is some information on both the frequentist risk and bayesian risk.  
+
 $$
 r(\theta, d(x)) = E_{\theta}[E_{X|\theta}[L(\theta, d(x)) | \theta] \cdot f(\theta)] = \int R(\theta, d(x)) f(\theta)  \space d\theta
 $$

@@ -275,3 +275,68 @@ Note: the inner and outer integrals can be switched because of Fubini’s Theore
 - Continuous: 
     - PDF: $f(X=x)$, $f(X)$, $f(x)$
     - CDF: $F(X \leq x)$, $F(X)$, $F(x)$
+
+
+
+
+
+# Literature review / Related work
+
+## Likelihood function
+
+<!-- Introduce the stochastic of structural variability as the $\eta$ this variable descries the relation of the structural properties for a given damage scenario $\theta$ and the sensor configuration $e$. The structural variability is introduced in the likelihood function as follows:
+
+$$
+f(y \mid \theta) = \int f(y \mid \theta, \eta) f(\eta) d\eta
+$$
+
+- this is not the right formulation  -->
+
+
+
+
+$$
+x(e, \eta, \theta) = FEM_{\text{Ambient vibration}}(\theta_0^{\text{baseline}} + \delta \theta_i^{\text{damage}} + \delta \eta^\text{structural variability})
+$$
+
+- $x(e, \eta, \theta)$ is the sensor data for a given sensor configuration $e$, structural variability $\eta$, and damage scenario $\theta$. This is obtained from the finite element model (FEM) of the structure under ambient vibrations, where the structural properties are affected by both the damage scenario and the structural variability.
+- $FEM_{\text{Ambient vibration}}$ represents the finite element model of the structure under ambient vibrations, which simulates the structural response for different damage scenarios and structural variability.
+- $\delta \eta^\text{structural variability} \sim \mathcal{N}(0, \Sigma_\eta)$ This is the structural variability, which is assumed to be Gaussian with zero mean and covariance $\Sigma_\eta$. in its simplest form, is this only the variation of the Young's modulus of the elements, but it can also include other sources of variability such as the variation in the mass or damping properties of the structure.
+- $\delta \theta_i^{\text{damage}}$ is the change in the structural properties due to damage, which is assumed to be a deterministic function of the damage scenario $\theta_i$.
+- $\theta_0^{\text{baseline}}$ is the baseline structural properties of the healthy structure.
+
+$$
+y(e, \eta, \theta) = OMA(x(e, \eta, \theta)) 
+$$
+
+- $y(e, \eta, \theta)$ is the measured vibration features for a given sensor configuration $e$, structural variability $\eta$, and damage scenario $\theta$. This is obtained from the operational modal analysis (OMA) of the sensor data, which extracts the vibration features from the ambient vibrations of the structure.
+- $OMA$ represents the operational modal analysis, which is a technique used to extract the vibration features from the ambient vibrations of the structure. The OMA can be performed using different algorithms such as the stochastic subspace identification (SSI) method or the frequency domain decomposition (FDD) method.
+
+we can now set up the simplified feature model as follows:
+
+$$
+y(e, \eta, \theta)  = y(\theta) + \epsilon(e, \eta)
+$$
+
+- $y(\theta)$ is the measured vibration features for a given damage scenario $\theta$, which is obtained from the OMA of the sensor data for the damaged structure.
+- $\epsilon(e, \eta) = y(e, \eta, \theta) - y(\theta)$ is the feature noise/uncertainty, which is the difference between the measured vibration features for a given sensor configuration, structural variability, and damage scenario, and the measured vibration features for the baseline structural properties of the healthy structure. This noise/uncertainty is assumed to be Gaussian with zero mean and covariance $\Sigma$, which can be estimated from the OMA of the sensor data for different sensor configurations and structural variability.
+
+
+### Gaussian noise model
+here are 2 papers there introduce a Gaussian noise model for the likelihood function in the context of structural health monitoring:
+
+- ([Kamariotis et al., 2022, p. 4](zotero://select/library/items/KI9ERE3Z)) ([pdf](zotero://open-pdf/library/items/BMP8X2JQ?page=4&annotation=7PGRG24E))
+    - independent Gaussian noise between the features, with an zero mean and a covariance matrix $\Sigma$ that is a function of the sensor configuration $e$.
+    - they assume an coefficients of variation (CV) of 0.02 for the noise in the modal properties. “For this analysis, both factors cλm and cΦm are assumed equal to 0.02, i.e. we assume that the total prediction error causes up to two percent deviation on the nominal model predicted values” ([Kamariotis et al., 2022, p. 11](zotero://select/library/items/KI9ERE3Z)) ([pdf](zotero://open-pdf/library/items/BMP8X2JQ?page=11&annotation=A9M7X8E7))
+- “Classical Bayesian FE model updating framework” ([Behmanesh et al., 2015, p. 361](zotero://select/library/items/F98ZCR9F)) ([pdf](zotero://open-pdf/library/items/AE6PENZL?page=2&annotation=CITBSCXT))
+    - same model for the error
+    - use Byes to update the likelihood function for for the probability of opsavering y given theta for a given sensor configuration e. 
+
+
+
+
+
+## Surrogate models
+
+- “For defining a surrogate model, we create a two-dimensional grid of values for D1(t), D2(t), and for each of the grid points we run a modal analysis with the FE model, and we store the output eigenvalues and mode shape vectors. Eventually we employ the following surrogates: For each of the eigenvalues, we fit a two-dimensional polynomial regression response surface model. For the mode shape displacement vector data, we replace the run of the structural FE model with a simple nearest neighbor lookup in the precomputed two-dimensional database.” ([Kamariotis et al., 2022, p. 12](zotero://select/library/items/KI9ERE3Z)) ([pdf](zotero://open-pdf/library/items/BMP8X2JQ?page=12&annotation=NXC8KPZ6))
+    - this is more useful for them because they are modeling damage detrition 

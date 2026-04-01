@@ -20,10 +20,24 @@ Thank you!
 # Week now - Overview 
 
 
+## Meeting Plan / Work Done Last Time
+
+- Reading papers on how to set up the link between the likelihood function and the uncertainty in observing the features for a damage state with a given sensor configuration.
+   - Hard to find papers that use the likelihood function for optimal sensor placement; most of the papers I have found have been using Bayesian risk to optimize the decision process.
+   - Most papers assume an arbitrary multivariate normal distribution for the noise feature function. 
+   - **Value of information from vibration-based structural health monitoring extracted via Bayesian model updating**
+- Investigate and implement [pyOMA2](https://github.com/dagghe/pyOMA2) for OMA
+- Set up a model and investigate the noise function for 2 sensor configurations
+   - Assume that it is okay to only introduce noise as changes in the stiffness of the elements, and that the noise is normally distributed and independent.
+   - Generate samples for the undamaged model with stiffness changes
+
 
 ## Questions + Notes
 
---- 
+
+
+
+<!-- --- 
 
 - Problem of defining Damage states and sensor states, they explode combinatorially if no assumptions are made.
   - Note: Sensor states is okay because that is what we optimize for. 
@@ -35,4 +49,4 @@ Thank you!
 
 --- 
 
-- how to define Priors and how shot they be understood??? 
+- how to define Priors and how shot they be understood???  -->

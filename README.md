@@ -17,10 +17,26 @@ Some spelling or grammar errors may be present, as the notes are not proofread a
 Thank you!
 
 --- 
-# Week now - Overview 
+# Meting Overview 
 
 
-## Meeting Plan / Work Done Last Time
+1. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ## Meeting Plan / Work Done Last Time
 
 - Reading papers on how to set up the link between the likelihood function and the uncertainty in observing the features for a damage state with a given sensor configuration.
    - Hard to find papers that use the likelihood function for optimal sensor placement; most of the papers I have found have been using Bayesian risk to optimize the decision process.
@@ -32,7 +48,7 @@ Thank you!
    - Generate samples for the undamaged model with stiffness changes
 
 
-## Questions + Notes
+## Questions + Notes -->
 
 
 

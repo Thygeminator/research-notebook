@@ -253,11 +253,11 @@ Bayes Risk is the expected value of a loss function over both the data and the p
 See section 2.3 page 60-65 in the book "The Bayesian Choice From Decision-Theoretic Foundations to Computational Implementations" by Christian P. Robert there is some information on both the frequentist risk and bayesian risk.  
 
 $$
-r(\theta, d(x)) = E_{\theta}[E_{X|\theta}[L(\theta, d(x)) | \theta] \cdot f(\theta)] = \int R(\theta, d(x)) f(\theta)  \space d\theta
+r(d(x)) = E_{\theta}[E_{X|\theta}[L(\theta, d(x)) | \theta] \cdot f(\theta)] = \int R(\theta, d(x)) f(\theta)  \space d\theta
 $$
 
 $$
-r(\theta, d(x)) = \int \int L(\theta, d(x)) f(x|\theta) f(\theta)  \space dx \space d\theta = \int \int L(\theta, d(x)) f(x|\theta) \space dx \space f(\theta)  \space d\theta
+r(d(x)) = \int \int L(\theta, d(x)) f(x|\theta) f(\theta)  \space dx \space d\theta = \int \int L(\theta, d(x)) f(x|\theta) \space dx \space f(\theta)  \space d\theta
 $$
 
 Note: the inner and outer integrals can be switched because of Fubini’s Theorem. see Theorem 2.3.2 in the book "The Bayesian Choice From Decision-Theoretic Foundations to Computational Implementations" by Christian P. Robert.
@@ -336,7 +336,7 @@ here are 2 papers there introduce a Gaussian noise model for the likelihood func
 
 
 
-## Surrogate models
+## Surrogate models-
 
 - “For defining a surrogate model, we create a two-dimensional grid of values for D1(t), D2(t), and for each of the grid points we run a modal analysis with the FE model, and we store the output eigenvalues and mode shape vectors. Eventually we employ the following surrogates: For each of the eigenvalues, we fit a two-dimensional polynomial regression response surface model. For the mode shape displacement vector data, we replace the run of the structural FE model with a simple nearest neighbor lookup in the precomputed two-dimensional database.” ([Kamariotis et al., 2022, p. 12](zotero://select/library/items/KI9ERE3Z)) ([pdf](zotero://open-pdf/library/items/BMP8X2JQ?page=12&annotation=NXC8KPZ6))
     - this is more useful for them because they are modeling damage detrition 

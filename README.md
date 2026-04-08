@@ -20,17 +20,23 @@ Thank you!
 # Meting Overview 
 
 
-1. 
+1. Go through my first presentation: [Presentation_1](https://thygeminator.github.io/research-notebook/Presentation_1.html) (~40 minutes)
+   - Ground work presentation, on SHM, OSP, My research topic, and Theory/Methodology.
+
+2. Second Presentation: [Presentation_2](https://thygeminator.github.io/research-notebook/Presentation_2.html) (~40 minutes)
+   - Simple case study, Present FEM model, Assumptions, Results.
+
+3. Whats Next (~10 minutes)
+   - Discuss what I should focus on til next meeting. 
+
+Note: We will discuss the context of the presentations along the way. So the presentation is meant to be an aid in or discussing more than a formal presentation.
 
 
+---  
+## Abbreviations 
 
-
-
-
-
-
-
-
+- Structural Health Monitoring (SHM)
+- Optimal Sensor Placement (OSP)
 
 
 

@@ -20,14 +20,14 @@ Thank you!
 # Meting Overview 
 
 
-1. Go through my first presentation: [Presentation_1](https://thygeminator.github.io/research-notebook/Presentation_1.html) (~40 minutes)
-   - Ground work presentation, on SHM, OSP, My research topic, and Theory/Methodology.
+1. Go through my first presentation: [Presentation_1](https://thygeminator.github.io/research-notebook/Presentation_1.html) (~20 minutes)
+   - ~~Ground work presentation, on SHM, OSP, My research topic, and~~ Theory/Methodology.
    - Strong slide: [Summary of Method in factor graph with plates](https://thygeminator.github.io/research-notebook/Presentation_1.html#/summary)
 
-2. Second Presentation: [Presentation_2](https://thygeminator.github.io/research-notebook/Presentation_2.html) (~40 minutes)
+2. Second Presentation: [Presentation_2](https://thygeminator.github.io/research-notebook/Presentation_2.html) (~60 minutes)
    - Simple case study, Present FEM model, Assumptions, Results.
 
-3. Whats Next (~10 minutes)
+3. Whats Next: [End of Presentation_2](https://thygeminator.github.io/research-notebook/Presentation_2.html) (~10 minutes)
    - Discuss what I should focus on til next meeting. 
 
 Note: We will discuss the context of the presentations along the way. So the presentation is meant to be an aid in or discussing more than a formal presentation.

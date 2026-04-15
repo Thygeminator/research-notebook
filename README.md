@@ -38,7 +38,8 @@ Note: We will discuss the context of the presentations along the way. So the pre
 
 - Structural Health Monitoring (SHM)
 - Optimal Sensor Placement (OSP)
-
+- Operational Modal Analysis (OMA)
+- Monte Carlo Simulation (MCS)
 
 
 

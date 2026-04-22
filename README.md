@@ -52,7 +52,7 @@ Week 16:
 
 Week 17: (Thyge and Luigi)
 
-- [Presentation_1]() - New stochatic model, and its implementation. 
+- [Presentation_1]() - New stochatic model, and its implications. 
 
 
 <!-- ## Meeting Plan / Work Done Last Time

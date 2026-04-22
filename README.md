@@ -16,11 +16,12 @@ Some spelling or grammar errors may be present, as the notes are not proofread a
 
 Thank you!
 
---- 
-# Meting Overview 
+
+---
+# Meeting Overview 
 
 
-1. Go through my first presentation: [Presentation_1](https://thygeminator.github.io/research-notebook/Presentation_1.html) (~20 minutes)
+<!-- 1. Go through my first presentation: [Presentation_1](https://thygeminator.github.io/research-notebook/Presentation_1.html) (~20 minutes)
    - ~~Ground work presentation, on SHM, OSP, My research topic, and~~ Theory/Methodology.
    - Strong slide: [Summary of Method in factor graph with plates](https://thygeminator.github.io/research-notebook/Presentation_1.html#/summary)
 
@@ -30,7 +31,7 @@ Thank you!
 3. Whats Next: [End of Presentation_2](https://thygeminator.github.io/research-notebook/Presentation_2.html) (~10 minutes)
    - Discuss what I should focus on til next meeting. 
 
-Note: We will discuss the context of the presentations along the way. So the presentation is meant to be an aid in or discussing more than a formal presentation.
+Note: We will discuss the context of the presentations along the way. So the presentation is meant to be an aid in or discussing more than a formal presentation. -->
 
 
 ---  
@@ -40,8 +41,16 @@ Note: We will discuss the context of the presentations along the way. So the pre
 - Optimal Sensor Placement (OSP)
 - Operational Modal Analysis (OMA)
 - Monte Carlo Simulation (MCS)
+- Machine learning (ML)
+- Bayesian Risk (BR)
 
+--- 
+## Links to old presentations
 
+Week 16:
+
+- [Presentation_1](https://thygeminator.github.io/research-notebook/week_16/Presentation_1.html) - Over all model and method overview.
+- [Presentation_2](https://thygeminator.github.io/research-notebook/week_16/Presentation_2.html) - Case study of cantilever beam*, Present FEM model, Assumptions, Results.
 
 
 <!-- ## Meeting Plan / Work Done Last Time

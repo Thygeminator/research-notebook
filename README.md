@@ -43,7 +43,7 @@ Note: The other parts of the presentation are for next meeting.
 - Bayesian Risk (BR)
 
 --- 
-## Links to old presentations
+## Old presentations
 
 Week 16:
 

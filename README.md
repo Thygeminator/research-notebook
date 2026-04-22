@@ -48,7 +48,7 @@ Note: The other parts of the presentation are for next meeting.
 Week 16:
 
 - [Presentation_1](https://thygeminator.github.io/research-notebook/week_16/Presentation_1.html) - Over all model and method overview.
-- [Presentation_2](https://thygeminator.github.io/research-notebook/week_16/Presentation_2.html) - Case study of cantilever beam*, Present FEM model, Assumptions, Results.
+- [Presentation_2](https://thygeminator.github.io/research-notebook/week_16/Presentation_2.html) - Case study of cantilever beam, Present FEM model, Assumptions, Results.
 
 Week 17: (Thyge and Luigi)
 

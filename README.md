@@ -22,12 +22,12 @@ Thank you!
 
 This week's meeting focuses on the new stochastic model, where the stochasticity is introduced on the modal properties and not directly on the features. There is also a focus on the implications of this choice and what options it opens up for the model of the Bayesian risk.
 
-- [Presentation](https://thygeminator.github.io/research-notebook/week_17/Presentation_1.html) - New stochastic model, and its implications.
+- [Presentation](https://thygeminator.github.io/research-notebook/P_new.html) - New stochastic model, and its implications.
    - Section for this meting: 
-      - [New Stochastic model]()
-      - [Code example - Stochastic model]()
-      - [Questions]()
-      
+      - [New Stochastic model](https://thygeminator.github.io/research-notebook/P_new.html#/new-stochastic-model)
+      - [Code example - Stochastic model](https://thygeminator.github.io/research-notebook/P_new.html#/code-example---stochastic-model)
+      - [Questions](https://thygeminator.github.io/research-notebook/P_new.html#/questions)
+
 Note: The other parts of the presentation are for next meeting.
 
 

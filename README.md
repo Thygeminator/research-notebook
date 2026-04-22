@@ -20,18 +20,16 @@ Thank you!
 ---
 # Meeting Overview 
 
+This week's meeting focuses on the new stochastic model, where the stochasticity is introduced on the modal properties and not directly on the features. There is also a focus on the implications of this choice and what options it opens up for the model of the Bayesian risk.
 
-<!-- 1. Go through my first presentation: [Presentation_1](https://thygeminator.github.io/research-notebook/Presentation_1.html) (~20 minutes)
-   - ~~Ground work presentation, on SHM, OSP, My research topic, and~~ Theory/Methodology.
-   - Strong slide: [Summary of Method in factor graph with plates](https://thygeminator.github.io/research-notebook/Presentation_1.html#/summary)
+- [Presentation](https://thygeminator.github.io/research-notebook/week_17/Presentation_1.html) - New stochastic model, and its implications.
+   - Section for this meting: 
+      - [New Stochastic model]()
+      - [Code example - Stochastic model]()
+      - [Questions]()
+      
+Note: The other parts of the presentation are for next meeting.
 
-2. Second Presentation: [Presentation_2](https://thygeminator.github.io/research-notebook/Presentation_2.html) (~60 minutes)
-   - Simple case study, Present FEM model, Assumptions, Results.
-
-3. Whats Next: [End of Presentation_2](https://thygeminator.github.io/research-notebook/Presentation_2.html) (~10 minutes)
-   - Discuss what I should focus on til next meeting. 
-
-Note: We will discuss the context of the presentations along the way. So the presentation is meant to be an aid in or discussing more than a formal presentation. -->
 
 
 ---  
@@ -51,6 +49,10 @@ Week 16:
 
 - [Presentation_1](https://thygeminator.github.io/research-notebook/week_16/Presentation_1.html) - Over all model and method overview.
 - [Presentation_2](https://thygeminator.github.io/research-notebook/week_16/Presentation_2.html) - Case study of cantilever beam*, Present FEM model, Assumptions, Results.
+
+Week 17: (Thyge and Luigi)
+
+- [Presentation_1](https://thygeminator.github.io/research-notebook/week_17/Presentation_1.html) - New stochatic model, and its implementation. 
 
 
 <!-- ## Meeting Plan / Work Done Last Time

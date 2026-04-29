@@ -29,18 +29,18 @@ Additionally, I have included confusion matrices for the different decision algo
 [Presentation](https://thygeminator.github.io/research-notebook/P_new.html) overview:
 
 
-- [New Stochastic model](https://thygeminator.github.io/research-notebook/P_new.html#/new-stochastic-model)
+- [New Stochastic model](https://thygeminator.github.io/research-notebook/P_new.html#/new-stochastic-model) (~20 min)
     - Mathimatical formulation, code example and implications
-- [Set up case study]()
+- [Set up case study](https://thygeminator.github.io/research-notebook/P_new.html#/case-study-overview) (~5 min)
     - FEM model, damage states, sensor states, cost function and priors.
     - Covariance matrix for the noise function.
-- [Analysis of the rsik]()
+- [Analysis of the rsik](https://thygeminator.github.io/research-notebook/P_new.html#/analysis-1) (~30 min)
     - A1: explicit liklihood function, MCS, no use of features 
     - A1.1: explicit liklihood function, MCS importance sampling, no use of features
     - A2: use of features, MCS whit importance sampling, 
          - logistic regression
-- [Questions](https://thygeminator.github.io/research-notebook/P_new.html#/questions)
-- [Whats next?](https://thygeminator.github.io/research-notebook/P_new.html#/whats-next)
+- [Questions](https://thygeminator.github.io/research-notebook/P_new.html#/questions) (~10 min)
+- [Whats next?](https://thygeminator.github.io/research-notebook/P_new.html#/whats-next) (~10 min)
 
 
 

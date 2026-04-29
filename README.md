@@ -20,7 +20,31 @@ Thank you!
 ---
 # Meeting Overview 
 
-This week's meeting focuses on the new stochastic model, where the stochasticity is introduced on the modal properties and not directly on the features. There is also a focus on the implications of this choice and what options it opens up for the model of the Bayesian risk.
+This week’s meeting focuses on the new stochastic model that I presented to Luigi last week, along with the implementation of new decision algorithms for estimating the risk associated with different sensor configurations.
+
+I have also implemented importance sampling to reduce the variance of the risk estimation, thereby lowering the number of samples required to obtain reliable results. 
+
+Additionally, I have included confusion matrices for the different decision algorithms. These provide insight into how each algorithm performs across the various sensor configurations.
+
+[Presentation](https://thygeminator.github.io/research-notebook/P_new.html) overview:
+
+
+- [New Stochastic model](https://thygeminator.github.io/research-notebook/P_new.html#/new-stochastic-model)
+    - Mathimatical formulation, code example and implications
+- [Set up case study]()
+    - FEM model, damage states, sensor states, cost function and priors.
+    - Covariance matrix for the noise function.
+- [Analysis of the rsik]()
+    - A1: explicit liklihood function, MCS, no use of features 
+    - A1.1: explicit liklihood function, MCS importance sampling, no use of features
+    - A2: use of features, MCS whit importance sampling, 
+         - logistic regression
+- [Questions](https://thygeminator.github.io/research-notebook/P_new.html#/questions)
+- [Whats next?](https://thygeminator.github.io/research-notebook/P_new.html#/whats-next)
+
+
+
+<!-- This week's meeting focuses on the new stochastic model, where the stochasticity is introduced on the modal properties and not directly on the features. There is also a focus on the implications of this choice and what options it opens up for the model of the Bayesian risk.
 
 - [Presentation](https://thygeminator.github.io/research-notebook/P_new.html) - New stochastic model, and its implications.
    - Section for this meting: 
@@ -28,7 +52,7 @@ This week's meeting focuses on the new stochastic model, where the stochasticity
       - [Code example - Stochastic model](https://thygeminator.github.io/research-notebook/P_new.html#/code-example---stochastic-model)
       - [Questions](https://thygeminator.github.io/research-notebook/P_new.html#/questions)
 
-Note: The other parts of the presentation are for next meeting.
+Note: The other parts of the presentation are for next meeting. -->
 
 
 
@@ -41,6 +65,9 @@ Note: The other parts of the presentation are for next meeting.
 - Monte Carlo Simulation (MCS)
 - Machine learning (ML)
 - Bayesian Risk (BR)
+- Maximum likelihood estimation (MLE)
+
+
 
 --- 
 ## Old presentations

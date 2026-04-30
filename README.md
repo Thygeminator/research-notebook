@@ -81,6 +81,10 @@ Week 17: (Thyge and Luigi)
 
 - [Presentation_1](https://thygeminator.github.io/research-notebook/week_17/P_new.html) - New stochatic model, and its implications. 
 
+Week 18: 
+
+- [Presentation_1](https://thygeminator.github.io/research-notebook/week_18/P_new.html) - New stochatic model and ML and confusion matrices.
+
 
 <!-- ## Meeting Plan / Work Done Last Time
 

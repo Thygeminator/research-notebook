@@ -20,7 +20,16 @@ Thank you!
 ---
 # Meeting Overview 
 
-This week’s meeting focuses on the new stochastic model that I presented to Luigi last week, along with the implementation of new decision algorithms for estimating the risk associated with different sensor configurations.
+This meeting is not very structured; I have not yet developed a good model for the continuous damage states.
+
+[Presentation](https://thygeminator.github.io/research-notebook/P_new.html) overview:
+
+- Time plan for the next 8 weeks
+- Stiffness change and its implications
+- Ideas for setting up probability for the stiffness function
+
+
+<!-- This week’s meeting focuses on the new stochastic model that I presented to Luigi last week, along with the implementation of new decision algorithms for estimating the risk associated with different sensor configurations.
 
 I have also implemented importance sampling to reduce the variance of the risk estimation, thereby lowering the number of samples required to obtain reliable results. 
 
@@ -40,7 +49,7 @@ Additionally, I have included confusion matrices for the different decision algo
     - A2: use of features, MCS whit importance sampling, 
          - logistic regression
 - [Questions](https://thygeminator.github.io/research-notebook/P_new.html#/questions) (~10 min)
-- [Whats next?](https://thygeminator.github.io/research-notebook/P_new.html#/whats-next) (~10 min)
+- [Whats next?](https://thygeminator.github.io/research-notebook/P_new.html#/whats-next) (~10 min) -->
 
 
 

@@ -20,7 +20,7 @@ Thank you!
 ---
 # Meeting Overview 
 
-Hey Evangelos and Luigi, This week's meetting holds an loot of data creation, analysis, plots and model building. we wiil start on slide 24 from last weeks presentation and then work through the rest of the presentation.
+Hey Evangelos and Luigi, This week's meeting holds a lot of data creation, analysis, plots and model building. We will start on slide 24 from last week's presentation and then work through the rest of the presentation.
 
 
 [Presentation](https://thygeminator.github.io/research-notebook/P_new.html) overview:

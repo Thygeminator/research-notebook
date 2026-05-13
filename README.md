@@ -20,13 +20,17 @@ Thank you!
 ---
 # Meeting Overview 
 
-This meeting is not very structured; I have not yet developed a good model for the continuous damage states.
+Hey Evangelos and Luigi, This week's meetting holds an loot of data creation, analysis, plots and model building. we wiil start on slide 24 from last weeks presentation and then work through the rest of the presentation.
+
 
 [Presentation](https://thygeminator.github.io/research-notebook/P_new.html) overview:
 
-- Time plan for the next 8 weeks
-- Stiffness change and its implications
-- Ideas for setting up probability for the stiffness function
+- Questions 
+- Generate data
+- Calculate features
+- Feature selection
+- Training and testing 
+
 
 
 <!-- This week’s meeting focuses on the new stochastic model that I presented to Luigi last week, along with the implementation of new decision algorithms for estimating the risk associated with different sensor configurations.
@@ -94,6 +98,11 @@ Week 18:
 
 - [Presentation_1](https://thygeminator.github.io/research-notebook/week_18/P_new.html) - New stochatic model and ML and confusion matrices.
 
+Week 19: (Thyge and Evangelos)
+
+- [Presentation_1](https://thygeminator.github.io/research-notebook/week_19/P_new.html) - implement $\delta E$ as an continuous stiffness reduction variable.
+
+
 
 <!-- ## Meeting Plan / Work Done Last Time
 
@@ -125,3 +134,6 @@ Week 18:
 --- 
 
 - how to define Priors and how shot they be understood???  -->
+
+
+

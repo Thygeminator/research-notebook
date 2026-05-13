@@ -25,12 +25,11 @@ Hey Evangelos and Luigi, This week's meeting holds a lot of data creation, analy
 
 [Presentation](https://thygeminator.github.io/research-notebook/P_new.html) overview:
 
-- Questions 
-- Generate data
-- Calculate features
-- Feature selection
-- Training and testing 
-
+- [Questions](https://thygeminator.github.io/research-notebook/P_new.html#/questions-1) (~10 min) 
+- [Generate data](https://thygeminator.github.io/research-notebook/P_new.html#/generate-data-step-1) (~10 min)
+- [Calculate features](https://thygeminator.github.io/research-notebook/P_new.html#/calculate-features-step-2) (~10 min)
+- [Feature selection](https://thygeminator.github.io/research-notebook/P_new.html#/feature-selection-step-3) (~15 min)
+- [Training and testing](https://thygeminator.github.io/research-notebook/P_new.html#/training-of-decision-model-step-4) (~15 min)
 
 
 <!-- This week’s meeting focuses on the new stochastic model that I presented to Luigi last week, along with the implementation of new decision algorithms for estimating the risk associated with different sensor configurations.

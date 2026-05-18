@@ -101,6 +101,9 @@ Week 19: (Thyge and Evangelos)
 
 - [Presentation_1](https://thygeminator.github.io/research-notebook/week_19/P_new.html) - implement $\delta E$ as an continuous stiffness reduction variable.
 
+Week 20: (Thyge and Luigi)
+
+- [Presentation_1](https://thygeminator.github.io/research-notebook/week_20/P_new.html) - Feature selection and data generation.
 
 
 <!-- ## Meeting Plan / Work Done Last Time

@@ -105,6 +105,10 @@ Week 20: (Thyge and Luigi)
 
 - [Presentation_1](https://thygeminator.github.io/research-notebook/week_20/P_new2.html) - Feature selection and data generation.
 
+week 21:
+
+- [Presentation_1](https://thygeminator.github.io/research-notebook/week_21/P_new.html) - Training and testing of decision model, confusion matrices and decision rule minimum risk. 
+
 
 <!-- ## Meeting Plan / Work Done Last Time
 
